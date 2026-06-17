@@ -1,6 +1,7 @@
 'use client';
 
 import { BellIcon, CreditCardIcon, LogOutIcon, MoreVerticalIcon, UserIcon } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 import { ModeToggle } from '@/components/theme/mode-toggle';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -25,6 +26,11 @@ export function NavUser({
   };
 }) {
   const { isMobile } = useSidebar();
+  const router = useRouter();
+
+  const onLogout = () => {
+    router.replace('/auth/signin');
+  };
 
   return (
     <SidebarMenu>
@@ -90,7 +96,7 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={onLogout}>
               <LogOutIcon />
               Log out
             </DropdownMenuItem>
