@@ -30,15 +30,15 @@ const data: {
   ],
   organizations: [
     {
-      name: 'DT Engenharia',
+      name: 'Brain Corp',
       logo: BrainIcon,
       plan: 'Enterprise',
     },
   ],
   user: {
-    name: 'Danilo Torchio',
-    email: 'danilotorchio@gmail.com',
-    avatar: 'https://gravatar.com/avatar/820821376244bbe9fdcc7020b3a320d3afa852cb8d54864f9b33f8a22fe93950?d=mp',
+    name: 'Cuca Maluca',
+    email: 'cuca@vai.te.pegar',
+    avatar: 'https://gravatar.com/avatar/0000?d=mp',
   },
 };
 
@@ -47,19 +47,6 @@ export default function AppSidebar({ ...props }: React.ComponentProps<typeof Sid
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
         <OrganizationSwitcher organizations={data.organizations} />
-        {/* <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton
-              className="data-[slot=sidebar-menu-button]:p-1.5!"
-              render={
-                <a href="#">
-                  <BrainIcon />
-                  <span className="text-base font-semibold">DT Engenharia</span>
-                </a>
-              }
-            />
-          </SidebarMenuItem>
-        </SidebarMenu> */}
       </SidebarHeader>
 
       <SidebarContent>
